@@ -24,9 +24,9 @@ class Director:
                     if event.key == pygame.K_ESCAPE:
                         self.quit()
 
-            active_scene.processed_input(event, self)
-            active_scene.render_scene(self)
-            active_scene.update_scene()
+            self.current_scene.processed_input(event, self)
+            self.current_scene.render_scene(self)
+            self.current_scene.update_scene()
 
             pygame.display.flip()
                         
